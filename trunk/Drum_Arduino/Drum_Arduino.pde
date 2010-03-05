@@ -1,12 +1,12 @@
                 
-int incomingByte = 0;
+byte incomingByte = 0;
 int n=0;
 
-int Dr = #; //D means drums r is red, y is yellow, b is blue, g is green, f is footpedal
-int Dy = #;
-int Db = #;
-int Dg = #;
-int Df = #;
+int Dr = 2; //D means drums r is red, y is yellow, b is blue, g is green, f is footpedal
+int Dy = 4;
+int Db = 6;
+int Dg = 8;
+int Df = 10;
 
 void setup()
 {
@@ -23,7 +23,7 @@ void loop()
   if(Serial.available() > 0) //checks to see if data is at data port
   {
    incomingByte=Serial.read(); 
-   if(bitRead(incomingByte,0)==1) //reads byte and checks to see if it is equal to one if so sets pin to true
+   if(bitRead(incomingByte,0)) //reads byte and checks to see if it is equal to one if so sets pin to true
      {
       digitalWrite(Dr, HIGH);
      }
@@ -47,7 +47,7 @@ void loop()
      {
       digitalWrite(Db, LOW);
      }
-    if(bitRead(incomingByte,1)==1)
+    if(bitRead(incomingByte,3)==1)
      {
       digitalWrite(Dg, HIGH);
      }
@@ -55,7 +55,7 @@ void loop()
      {
       digitalWrite(Dg, LOW);
      } 
-   if(bitRead(incomingByte,4)==1)
+   if(bitRead(incomingByte,2)==1)
      {
       digitalWrite(Df, HIGH);
      }
