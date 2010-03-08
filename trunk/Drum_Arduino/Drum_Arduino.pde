@@ -55,7 +55,7 @@ void loop()
      {
       digitalWrite(Dg, LOW);
      } 
-   if(bitRead(incomingByte,2)==1)
+   if(bitRead(incomingByte,4)==1)
      {
       digitalWrite(Df, HIGH);
      }
