@@ -3,10 +3,10 @@ byte incomingByte = 0;
 int n=0;
 
 int Dr = 2; //D means drums r is red, y is yellow, b is blue, g is green, f is footpedal
-int Dy = 4;
-int Db = 6;
-int Dg = 8;
-int Df = 10;
+int Dy = 3;
+int Db = 4;
+int Dg = 5;
+int Df = 6;
 
 void setup()
 {
