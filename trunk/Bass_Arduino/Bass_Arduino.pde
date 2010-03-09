@@ -2,18 +2,12 @@
 int incomingByte = 0;
 int n=0;
 
-int Bg = #; //B means bass g is green, r is red, y is yellow, b is blue, o is orange
-int Br = #;
-int By = #;
-int Bb = #;
-int Bo = #;
-//int Bs = #; //Bs is bass strum
-
-//int Dr = #; //D means drums r is red, y is yellow, b is blue, g is green, f is footpedal
-//int Dy = #;
-//int Db = #;
-//int Dg = #;
-//int Df = #;
+int Bg = 2; //B means bass g is green, r is red, y is yellow, b is blue, o is orange
+int Br = 3;
+int By = 4;
+int Bb = 5;
+int Bo = 6;
+int Bs = 7; //Bs is bass strum
 
 void setup()
 {
@@ -24,7 +18,7 @@ void setup()
   pinMode(By, OUTPUT);
   pinMode(Bb, OUTPUT);
   pinMode(Bo, OUTPUT);
-  //pinMode(Bs, OUTPUT);
+  pinMode(Bs, OUTPUT);
   
   //pinMode(Dr, OUTPUT); //Drums
   //pinMode(Dy, OUTPUT);
@@ -41,42 +35,52 @@ void loop()
    if(bitRead(incomingByte,0)==1) //reads byte and checks to see if it is equal to one if so sets pin to true
      {
       digitalWrite(Bg, HIGH);
+      digitalWrite(Bs, HIGH);
      }
      else                        //if the byte is not equal to one sets the pin to false
      {
       digitalWrite(Bg, LOW);
+      digitalWrite(Bs, LOW);
      }
    if(bitRead(incomingByte,1)==1)
      {
       digitalWrite(Br, HIGH);
+      digitalWrite(Bs, HIGH);
      }
      else
      {
       digitalWrite(Br, LOW);
+      digitalWrite(Bs, LOW);
      } 
    if(bitRead(incomingByte,2)==1)
      {
       digitalWrite(By, HIGH);
+      digitalWrite(Bs, HIGH);
      }
      else
      {
       digitalWrite(By, LOW);
+      digitalWrite(Bs, LOW);
      }
     if(bitRead(incomingByte,1)==1)
      {
       digitalWrite(Bb, HIGH);
+      digitalWrite(Bs, HIGH);
      }
      else
      {
       digitalWrite(Bb, LOW);
+      digitalWrite(Bs, LOW);
      } 
    if(bitRead(incomingByte,4)==1)
      {
       digitalWrite(Bo, HIGH);
+      digitalWrite(Bs, HIGH);
      }
      else
      {
       digitalWrite(Bo, LOW);
+      digitalWrite(Bs, LOW);
      }    
   }
 }
