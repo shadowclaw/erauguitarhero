@@ -9,6 +9,8 @@ int By = 4;
 int Bb = 5;
 int Bo = 6;
 int Bs = 7; //Bs is bass strum
+int test = 12;
+int tval=0;
 
 void setup()
 {
@@ -20,6 +22,7 @@ void setup()
   pinMode(Bb, OUTPUT);
   pinMode(Bo, OUTPUT);
   pinMode(Bs, OUTPUT);
+  pinMode(test,INPUT);
   
   //pinMode(Dr, OUTPUT); //Drums
   //pinMode(Dy, OUTPUT);
@@ -30,6 +33,34 @@ void setup()
 
 void loop()
 {
+  tval=digitalRead(test);
+ if(tval==0)
+  {
+   digitalWrite(Bg, HIGH);
+   delay(1000);
+   digitalWrite(Bg, LOW);
+   delay (1000);
+   digitalWrite(Br, HIGH);
+   delay(1000);
+   digitalWrite(Br, LOW);
+   delay(1000);
+   digitalWrite(By, HIGH);
+   delay(1000);
+   digitalWrite(By, LOW);
+   delay(1000);
+   digitalWrite(Bb, HIGH);
+   delay(1000);
+   digitalWrite(Bb, LOW);
+   delay(1000);
+   digitalWrite(Bo, HIGH);
+   delay(1000);
+   digitalWrite(Bo, LOW);
+   delay(1000);
+   digitalWrite(Bs, HIGH);
+   delay(1000);
+   digitalWrite(Bs, LOW);
+  } 
+  
   if(Serial.available() > 0) //checks to see if data is at data port
   {
    s=0; 
