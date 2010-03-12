@@ -7,6 +7,8 @@ int Dy = 3;
 int Db = 4;
 int Dg = 5;
 int Df = 6;
+int test = 12;
+int tval=0;
 
 void setup()
 {
@@ -20,6 +22,29 @@ void setup()
 
 void loop()
 {
+ tval=digitalRead(test);
+ if(tval==0)
+  {
+   digitalWrite(Dr, HIGH);
+   delay(1000);
+   digitalWrite(Dr, LOW);
+   delay (1000);
+   digitalWrite(Dy, HIGH);
+   delay(1000);
+   digitalWrite(Dy, LOW);
+   delay(1000);
+   digitalWrite(Db, HIGH);
+   delay(1000);
+   digitalWrite(Db, LOW);
+   delay(1000);
+   digitalWrite(Dg, HIGH);
+   delay(1000);
+   digitalWrite(Dg, LOW);
+   delay(1000);
+   digitalWrite(Df, HIGH);
+   delay(1000);
+   digitalWrite(Df, LOW);
+  } 
   if(Serial.available() > 0) //checks to see if data is at data port
   {
    incomingByte=Serial.read();
