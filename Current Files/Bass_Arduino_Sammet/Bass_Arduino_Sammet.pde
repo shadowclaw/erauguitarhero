@@ -1,7 +1,6 @@
                 
 int incomingByte = 0;
-int n=0;
-int s=0; //strum bar variable
+
 int strum_delay = 10; //sets delay for strum bar after notes are depressed
 int Bg = 2; //B means bass g is green, r is red, y is yellow, b is blue, o is orange
 int Br = 3;
@@ -10,7 +9,6 @@ int Bb = 5;
 int Bo = 6;
 int Bs = 7; //Bs is bass strum
 int test = 12;
-int tval=0;
 
 void setup()
 {
@@ -33,8 +31,7 @@ void setup()
 
 void loop()
 {
-  tval=digitalRead(test);
- if(tval==0)
+ if(digitalRead(test))
   {
    digitalWrite(Bg, HIGH);
    delay(1000);
@@ -62,67 +59,23 @@ void loop()
   } 
   
   if(Serial.available() > 0) //checks to see if data is at data port
-  {
-   s=0; 
+  { 
    incomingByte=Serial.read(); 
    
+   digitalWrite(Bg,bitRead(incomingByte,0)); //reads the value of the byte and sets the output pin to the value of the bit
    
+   digitalWrite(Br,bitRead(incomingByte,1));
    
-   if(bitRead(incomingByte,0)==1) //reads byte and checks to see if it is equal to one if so sets pin to true
-     {
-      digitalWrite(Bg, HIGH);
-      s++;
-     }
-     else                        //if the byte is not equal to one sets the pin to false
-     {
-      digitalWrite(Bg, LOW);
-     }
-   if(bitRead(incomingByte,1)==1)
-     {
-      digitalWrite(Br, HIGH);
-      s++;
-     }
-     else
-     {
-      digitalWrite(Br, LOW);
-     } 
-   if(bitRead(incomingByte,2)==1)
-     {
-      digitalWrite(By, HIGH);
-      s++;
-     }
-     else
-     {
-      digitalWrite(By, LOW);
-     }
-    if(bitRead(incomingByte,3)==1)
-     {
-      digitalWrite(Bb, HIGH);
-      s++;
-     }
-     else
-     {
-      digitalWrite(Bb, LOW);
-     } 
-   if(bitRead(incomingByte,4)==1)
-     {
-      digitalWrite(Bo, HIGH);
-      s=s++;
-     }
-     else
-     {
-      digitalWrite(Bo, LOW);
-     }
-     delay(strum_delay); 
-    if(s!=0)
-    {
-     digitalWrite(Bs, HIGH);
-    }
-    else
-    {
-     digitalWrite(Bs, LOW);
-    }
+   digitalWrite(By,bitRead(incomingByte,2));
+   
+   digitalWrite(Bb,bitRead(incomingByte,3));
+  
+   digitalWrite(Bo,bitRead(incomingByte,4));
+  
+   delay(strum_delay);
+  
+   digitalWrite(Bs,!(incomingByte && 0x00)); 
   }
-  digitalWrite(Bs,(bitRead(incomingByte,0) or bitRead(incomingByte,1) or bitRead(incomingByte,2) or bitRead(incomingByte,3) or bitRead(incomingByte,4)));
+  
 }
 
