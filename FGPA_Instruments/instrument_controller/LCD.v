@@ -48,42 +48,20 @@ begin
 		2'b0:begin
 			  case(an0)
 			  4'h0:CATHODE = 8'b11000000;//0
-			  4'h1:CATHODE = 8'b11111001;//1
+			  4'h1:CATHODE = 8'b10000111;//t
 			  4'h2:CATHODE = 8'b10100100;//2
 			  4'h3:CATHODE = 8'b10110000;//3
-			  4'h4:CATHODE = 8'b10011001;//4
-			  4'h5:CATHODE = 8'b10010010;//5
-			  4'h6:CATHODE = 8'b10000010;//6
-			  4'h7:CATHODE = 8'b11111000;//7
-			  4'h8:CATHODE = 8'b10000000;//8
-			  4'h9:CATHODE = 8'b10010000;//9
-			  4'hA:CATHODE = 8'b10001000;//A
-			  4'hB:CATHODE = 8'b10000011;//b
-			  4'hC:CATHODE = 8'b11000110;//C
-			  4'hD:CATHODE = 8'b10100001;//d
-			  4'hE:CATHODE = 8'b10000110;//E
-			  4'hF:CATHODE = 8'b10001110;//F
+			  4'h4:CATHODE = 8'b10001100;//P
 			  endcase
 			  end
 			  
 		2'b1:begin
 			  case(an1)
 			  4'h0:CATHODE = 8'b11000000;//0
-			  4'h1:CATHODE = 8'b11111001;//1
-			  4'h2:CATHODE = 8'b10100100;//2
-			  4'h3:CATHODE = 8'b10110000;//3
-			  4'h4:CATHODE = 8'b10011001;//4
-			  4'h5:CATHODE = 8'b10010010;//5
-			  4'h6:CATHODE = 8'b10000010;//6
-			  4'h7:CATHODE = 8'b11111000;//7
-			  4'h8:CATHODE = 8'b10000000;//8
-			  4'h9:CATHODE = 8'b10010000;//9
-			  4'hA:CATHODE = 8'b10001000;//A
-			  4'hB:CATHODE = 8'b10000011;//b
-			  4'hC:CATHODE = 8'b11000110;//C
-			  4'hD:CATHODE = 8'b10100001;//d
-			  4'hE:CATHODE = 8'b10000110;//E
-			  4'hF:CATHODE = 8'b10001110;//F
+			  4'h1:CATHODE = 8'b11111001;//e
+			  4'h2:CATHODE = 8'b10000110;//2
+			  4'h3:CATHODE = 8'b11000111;//L
+			  4'h4:CATHODE = 8'b11000111;//4
 			  endcase
 			  end	
 			  
@@ -91,41 +69,19 @@ begin
 			  case(an2)
 			  4'h0:CATHODE = 8'b11000000;//0
 			  4'h1:CATHODE = 8'b11111001;//1
-			  4'h2:CATHODE = 8'b10100100;//2
-			  4'h3:CATHODE = 8'b10110000;//3
+			  4'h2:CATHODE = 8'b10001000;//A
+			  4'h3:CATHODE = 8'b10010010;//s
 			  4'h4:CATHODE = 8'b10011001;//4
-			  4'h5:CATHODE = 8'b10010010;//5
-			  4'h6:CATHODE = 8'b10000010;//6
-			  4'h7:CATHODE = 8'b11111000;//7
-			  4'h8:CATHODE = 8'b10000000;//8
-			  4'h9:CATHODE = 8'b10010000;//9
-			  4'hA:CATHODE = 8'b10001000;//A
-			  4'hB:CATHODE = 8'b10000011;//b
-			  4'hC:CATHODE = 8'b11000110;//C
-			  4'hD:CATHODE = 8'b10100001;//d
-			  4'hE:CATHODE = 8'b10000110;//E
-			  4'hF:CATHODE = 8'b10001110;//F
 			  endcase
 			  end
 			  
 		2'b11:begin
 			  case(an3)
 			  4'h0:CATHODE = 8'b11000000;//0
-			  4'h1:CATHODE = 8'b11111001;//1
+			  4'h1:CATHODE = 8'b10010001;//Y
 			  4'h2:CATHODE = 8'b10100100;//2
 			  4'h3:CATHODE = 8'b10110000;//3
-			  4'h4:CATHODE = 8'b10011001;//4
-			  4'h5:CATHODE = 8'b10010010;//5
-			  4'h6:CATHODE = 8'b10000010;//6
-			  4'h7:CATHODE = 8'b11111000;//7
-			  4'h8:CATHODE = 8'b10000000;//8
-			  4'h9:CATHODE = 8'b10010000;//9
-			  4'hA:CATHODE = 8'b10001000;//A
-			  4'hB:CATHODE = 8'b10000011;//b
-			  4'hC:CATHODE = 8'b11000110;//C
-			  4'hD:CATHODE = 8'b10100001;//d
-			  4'hE:CATHODE = 8'b10000110;//E
-			  4'hF:CATHODE = 8'b10001110;//F
+			  4'h4:CATHODE = 8'b10000111;//t
 			  endcase
 			  end
 		endcase

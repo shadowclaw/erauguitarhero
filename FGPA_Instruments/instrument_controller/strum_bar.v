@@ -60,7 +60,7 @@ begin
 	
 	if(drum_foot != inst[2])
 	begin
-		if(slw_clk_foot <= 5000000)  //500000 = 10ms
+		if(slw_clk_foot <= 500000)  //500000 = 10ms
 			slw_clk_foot = slw_clk_foot + 1; 
 		else
 			begin
