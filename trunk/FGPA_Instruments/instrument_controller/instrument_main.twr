@@ -3,7 +3,7 @@ Release 10.1.03 Trace  (nt)
 Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
 
 C:\Xilinx\10.1\ISE\bin\nt\unwrapped\trce.exe -ise
-C:/Users/Major Smasher/Desktop/erauguitarhero/FGPA_Instruments/instrument_controller/instrument_controller.ise
+C:/Users/Shadow/Desktop/erauguitarhero/FGPA_Instruments/instrument_controller/instrument_controller.ise
 -intstyle ise -v 3 -s 5 -xml instrument_main instrument_main.ncd -o
 instrument_main.twr instrument_main.pcf -ucf instrument_main.ucf
 
@@ -37,17 +37,17 @@ Setup/Hold to clock clk
             |  Setup to  |  Hold to   |                  | Clock  |
 Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------------+--------+
-RxD         |    1.809(R)|   -0.330(R)|clk_BUFGP         |   0.000|
-btn<0>      |    7.492(R)|   -0.704(R)|clk_BUFGP         |   0.000|
-btn<1>      |    7.032(R)|   -0.229(R)|clk_BUFGP         |   0.000|
-btn<2>      |    6.667(R)|   -0.358(R)|clk_BUFGP         |   0.000|
-sw<0>       |    3.546(R)|    0.583(R)|clk_BUFGP         |   0.000|
-sw<1>       |    3.514(R)|    0.488(R)|clk_BUFGP         |   0.000|
-sw<2>       |    3.023(R)|    1.165(R)|clk_BUFGP         |   0.000|
-sw<3>       |    2.706(R)|    1.029(R)|clk_BUFGP         |   0.000|
-sw<4>       |    3.247(R)|    0.800(R)|clk_BUFGP         |   0.000|
-sw<5>       |    0.698(R)|    0.572(R)|clk_BUFGP         |   0.000|
-sw<7>       |    4.902(R)|    0.393(R)|clk_BUFGP         |   0.000|
+RxD         |    1.358(R)|    0.031(R)|clk_BUFGP         |   0.000|
+btn<0>      |    7.593(R)|   -0.372(R)|clk_BUFGP         |   0.000|
+btn<1>      |    7.318(R)|   -0.382(R)|clk_BUFGP         |   0.000|
+btn<2>      |    7.237(R)|   -0.126(R)|clk_BUFGP         |   0.000|
+sw<0>       |    2.890(R)|    0.414(R)|clk_BUFGP         |   0.000|
+sw<1>       |    3.656(R)|    0.296(R)|clk_BUFGP         |   0.000|
+sw<2>       |    4.372(R)|    0.788(R)|clk_BUFGP         |   0.000|
+sw<3>       |    3.723(R)|    0.986(R)|clk_BUFGP         |   0.000|
+sw<4>       |    3.985(R)|    0.664(R)|clk_BUFGP         |   0.000|
+sw<5>       |    0.920(R)|    0.395(R)|clk_BUFGP         |   0.000|
+sw<7>       |    7.531(R)|    0.178(R)|clk_BUFGP         |   0.000|
 ------------+------------+------------+------------------+--------+
 
 Clock clk to Pad
@@ -55,42 +55,42 @@ Clock clk to Pad
             | clk (edge) |                  | Clock  |
 Destination |   to PAD   |Internal Clock(s) | Phase  |
 ------------+------------+------------------+--------+
-ANODE<0>    |    6.538(R)|clk_BUFGP         |   0.000|
-ANODE<1>    |    7.259(R)|clk_BUFGP         |   0.000|
-ANODE<2>    |    6.492(R)|clk_BUFGP         |   0.000|
-ANODE<3>    |    7.255(R)|clk_BUFGP         |   0.000|
-CATHODE<0>  |    7.631(R)|clk_BUFGP         |   0.000|
-CATHODE<1>  |    7.237(R)|clk_BUFGP         |   0.000|
-CATHODE<2>  |    6.545(R)|clk_BUFGP         |   0.000|
-CATHODE<3>  |    6.970(R)|clk_BUFGP         |   0.000|
-CATHODE<4>  |    7.013(R)|clk_BUFGP         |   0.000|
-CATHODE<6>  |    6.962(R)|clk_BUFGP         |   0.000|
-CATHODE<7>  |    6.527(R)|clk_BUFGP         |   0.000|
-bass<0>     |    6.577(R)|clk_BUFGP         |   0.000|
-bass<1>     |    7.313(R)|clk_BUFGP         |   0.000|
-bass<2>     |    7.005(R)|clk_BUFGP         |   0.000|
-bass<3>     |    6.949(R)|clk_BUFGP         |   0.000|
-bass<4>     |    7.513(R)|clk_BUFGP         |   0.000|
-drum<0>     |    8.111(R)|clk_BUFGP         |   0.000|
-drum<1>     |    7.610(R)|clk_BUFGP         |   0.000|
-drum<2>     |    7.952(R)|clk_BUFGP         |   0.000|
-drum<3>     |    7.617(R)|clk_BUFGP         |   0.000|
-drum_foot   |    8.160(R)|clk_BUFGP         |   0.000|
-guitar<0>   |    7.580(R)|clk_BUFGP         |   0.000|
-guitar<1>   |    7.552(R)|clk_BUFGP         |   0.000|
-guitar<2>   |    7.682(R)|clk_BUFGP         |   0.000|
-guitar<3>   |    7.006(R)|clk_BUFGP         |   0.000|
-guitar<4>   |    7.600(R)|clk_BUFGP         |   0.000|
-leds<0>     |    7.917(R)|clk_BUFGP         |   0.000|
-leds<1>     |    7.558(R)|clk_BUFGP         |   0.000|
-leds<2>     |    7.400(R)|clk_BUFGP         |   0.000|
-leds<3>     |    7.262(R)|clk_BUFGP         |   0.000|
-leds<4>     |    7.012(R)|clk_BUFGP         |   0.000|
-leds<5>     |    6.775(R)|clk_BUFGP         |   0.000|
-leds<6>     |    9.519(R)|clk_BUFGP         |   0.000|
-leds<7>     |    7.089(R)|clk_BUFGP         |   0.000|
-strum_b     |    8.376(R)|clk_BUFGP         |   0.000|
-strum_g     |    7.030(R)|clk_BUFGP         |   0.000|
+ANODE<0>    |    6.481(R)|clk_BUFGP         |   0.000|
+ANODE<1>    |    7.261(R)|clk_BUFGP         |   0.000|
+ANODE<2>    |    7.234(R)|clk_BUFGP         |   0.000|
+ANODE<3>    |    6.483(R)|clk_BUFGP         |   0.000|
+CATHODE<0>  |    7.857(R)|clk_BUFGP         |   0.000|
+CATHODE<1>  |    6.516(R)|clk_BUFGP         |   0.000|
+CATHODE<2>  |    7.000(R)|clk_BUFGP         |   0.000|
+CATHODE<3>  |    7.013(R)|clk_BUFGP         |   0.000|
+CATHODE<4>  |    6.996(R)|clk_BUFGP         |   0.000|
+CATHODE<6>  |    7.266(R)|clk_BUFGP         |   0.000|
+CATHODE<7>  |    7.294(R)|clk_BUFGP         |   0.000|
+bass<0>     |    7.036(R)|clk_BUFGP         |   0.000|
+bass<1>     |    7.388(R)|clk_BUFGP         |   0.000|
+bass<2>     |    6.983(R)|clk_BUFGP         |   0.000|
+bass<3>     |    6.995(R)|clk_BUFGP         |   0.000|
+bass<4>     |    7.272(R)|clk_BUFGP         |   0.000|
+drum<0>     |    7.942(R)|clk_BUFGP         |   0.000|
+drum<1>     |    7.897(R)|clk_BUFGP         |   0.000|
+drum<2>     |    8.063(R)|clk_BUFGP         |   0.000|
+drum<3>     |    7.411(R)|clk_BUFGP         |   0.000|
+drum_foot   |    8.335(R)|clk_BUFGP         |   0.000|
+guitar<0>   |    7.462(R)|clk_BUFGP         |   0.000|
+guitar<1>   |    7.333(R)|clk_BUFGP         |   0.000|
+guitar<2>   |    7.650(R)|clk_BUFGP         |   0.000|
+guitar<3>   |    7.030(R)|clk_BUFGP         |   0.000|
+guitar<4>   |    7.611(R)|clk_BUFGP         |   0.000|
+leds<0>     |    7.853(R)|clk_BUFGP         |   0.000|
+leds<1>     |    7.326(R)|clk_BUFGP         |   0.000|
+leds<2>     |    7.176(R)|clk_BUFGP         |   0.000|
+leds<3>     |    7.022(R)|clk_BUFGP         |   0.000|
+leds<4>     |    6.952(R)|clk_BUFGP         |   0.000|
+leds<5>     |    6.714(R)|clk_BUFGP         |   0.000|
+leds<6>     |    9.052(R)|clk_BUFGP         |   0.000|
+leds<7>     |    8.595(R)|clk_BUFGP         |   0.000|
+strum_b     |    8.179(R)|clk_BUFGP         |   0.000|
+strum_g     |    6.761(R)|clk_BUFGP         |   0.000|
 ------------+------------+------------------+--------+
 
 Clock to Setup on destination clock clk
@@ -98,18 +98,18 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    7.664|         |         |         |
+clk            |    7.320|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Wed Apr 28 09:37:35 2010 
+Analysis completed Wed Apr 28 12:12:55 2010 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 136 MB
+Peak Memory Usage: 151 MB
 
 
 

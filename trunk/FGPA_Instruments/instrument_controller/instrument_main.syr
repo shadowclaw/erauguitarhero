@@ -1,16 +1,16 @@
 Release 10.1.03 - xst K.39 (nt)
 Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
---> Parameter TMPDIR set to C:/Users/Major Smasher/Desktop/erauguitarhero/FGPA_Instruments/instrument_controller/xst/projnav.tmp
+--> Parameter TMPDIR set to C:/Users/Shadow/Desktop/erauguitarhero/FGPA_Instruments/instrument_controller/xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total CPU time to Xst completion: 0.12 secs
  
---> Parameter xsthdpdir set to C:/Users/Major Smasher/Desktop/erauguitarhero/FGPA_Instruments/instrument_controller/xst
+--> Parameter xsthdpdir set to C:/Users/Shadow/Desktop/erauguitarhero/FGPA_Instruments/instrument_controller/xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.14 secs
+Total CPU time to Xst completion: 0.12 secs
  
 --> Reading design: instrument_main.prj
 
@@ -235,8 +235,8 @@ WARNING:Xst:1780 - Signal <slw_clk_foot> is never used or assigned. This unconne
     Found 4-bit register for signal <an2>.
     Found 4-bit register for signal <an3>.
     Found 3-bit register for signal <inst>.
-    Found 5-bit comparator greater for signal <inst_1$cmp_gt0000> created at line 79.
-    Found 5-bit comparator greater for signal <inst_1$cmp_gt0001> created at line 110.
+    Found 5-bit comparator greater for signal <inst_1$cmp_gt0000> created at line 80.
+    Found 5-bit comparator greater for signal <inst_1$cmp_gt0001> created at line 117.
     Found 1-bit register for signal <leds_on>.
     Found 30-bit comparator lessequal for signal <old_leds_on_5$cmp_le0000> created at line 58.
     Found 4-bit adder for signal <old_state_LED_6$addsub0000> created at line 64.
@@ -403,26 +403,27 @@ Design Statistics
 # IOs                              : 50
 
 Cell Usage :
-# BELS                             : 755
+# BELS                             : 782
 #      GND                         : 1
-#      INV                         : 29
-#      LUT1                        : 164
-#      LUT2                        : 22
+#      INV                         : 28
+#      LUT1                        : 161
+#      LUT2                        : 30
 #      LUT2_D                      : 1
 #      LUT2_L                      : 2
-#      LUT3                        : 31
-#      LUT3_D                      : 5
-#      LUT4                        : 94
-#      LUT4_L                      : 10
-#      MUXCY                       : 215
-#      MUXF5                       : 17
+#      LUT3                        : 22
+#      LUT3_D                      : 2
+#      LUT4                        : 119
+#      LUT4_D                      : 2
+#      LUT4_L                      : 13
+#      MUXCY                       : 211
+#      MUXF5                       : 26
 #      VCC                         : 1
 #      XORCY                       : 163
 # FlipFlops/Latches                : 234
-#      FD                          : 17
-#      FDE                         : 56
-#      FDR                         : 61
-#      FDRE                        : 94
+#      FD                          : 16
+#      FDE                         : 55
+#      FDR                         : 62
+#      FDRE                        : 95
 #      FDS                         : 6
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
@@ -436,9 +437,9 @@ Device utilization summary:
 
 Selected Device : 3s500efg320-5 
 
- Number of Slices:                      186  out of   4656     3%  
+ Number of Slices:                      198  out of   4656     4%  
  Number of Slice Flip Flops:            234  out of   9312     2%  
- Number of 4 input LUTs:                358  out of   9312     3%  
+ Number of 4 input LUTs:                380  out of   9312     4%  
  Number of IOs:                          50
  Number of bonded IOBs:                  49  out of    232    21%  
  Number of GCLKs:                         1  out of     24     4%  
@@ -475,8 +476,8 @@ Timing Summary:
 ---------------
 Speed Grade: -5
 
-   Minimum period: 6.809ns (Maximum Frequency: 146.870MHz)
-   Minimum input arrival time before clock: 7.968ns
+   Minimum period: 6.871ns (Maximum Frequency: 145.543MHz)
+   Minimum input arrival time before clock: 8.065ns
    Maximum output required time after clock: 4.182ns
    Maximum combinational path delay: No path found
 
@@ -486,10 +487,10 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 6.809ns (frequency: 146.870MHz)
-  Total number of paths / destination ports: 9273 / 541
+  Clock period: 6.871ns (frequency: 145.543MHz)
+  Total number of paths / destination ports: 9358 / 542
 -------------------------------------------------------------------------
-Delay:               6.809ns (Levels of Logic = 19)
+Delay:               6.871ns (Levels of Logic = 19)
   Source:            slw_clk_0 (FF)
   Destination:       leds_6 (FF)
   Source Clock:      clk rising
@@ -515,38 +516,38 @@ Delay:               6.809ns (Levels of Logic = 19)
      MUXCY:CI->O           1   0.051   0.000  Mcompar_old_leds_on_5_cmp_le0000_cy<11> (Mcompar_old_leds_on_5_cmp_le0000_cy<11>)
      MUXCY:CI->O           1   0.051   0.000  Mcompar_old_leds_on_5_cmp_le0000_cy<12> (Mcompar_old_leds_on_5_cmp_le0000_cy<12>)
      MUXCY:CI->O           1   0.051   0.000  Mcompar_old_leds_on_5_cmp_le0000_cy<13> (Mcompar_old_leds_on_5_cmp_le0000_cy<13>)
-     MUXCY:CI->O          15   0.400   0.867  Mcompar_old_leds_on_5_cmp_le0000_cy<14> (old_leds_on_5_cmp_le0000)
-     LUT4:I3->O            3   0.612   0.603  _old_state_LED_6<3>1 (_old_state_LED_6<3>)
+     MUXCY:CI->O          16   0.399   0.882  Mcompar_old_leds_on_5_cmp_le0000_cy<14> (old_leds_on_5_cmp_le0000)
+     LUT4:I3->O            4   0.612   0.651  _old_state_LED_6<3>1 (_old_state_LED_6<3>)
      LUT4_L:I0->LO         1   0.612   0.103  leds_6_mux000021 (leds_6_mux000021)
      LUT4:I3->O            1   0.612   0.000  leds_6_mux000036 (leds_6_mux0000)
      FD:D                      0.268          leds_6
     ----------------------------------------
-    Total                      6.809ns (4.703ns logic, 2.106ns route)
-                                       (69.1% logic, 30.9% route)
+    Total                      6.871ns (4.703ns logic, 2.168ns route)
+                                       (68.4% logic, 31.6% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 271 / 51
+  Total number of paths / destination ports: 361 / 51
 -------------------------------------------------------------------------
-Offset:              7.968ns (Levels of Logic = 6)
+Offset:              8.065ns (Levels of Logic = 6)
   Source:            btn<0> (PAD)
-  Destination:       leds_3 (FF)
+  Destination:       leds_4 (FF)
   Destination Clock: clk rising
 
-  Data Path: btn<0> to leds_3
+  Data Path: btn<0> to leds_4
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            10   1.106   0.902  btn_0_IBUF (btn_0_IBUF)
-     LUT3:I0->O            4   0.612   0.651  old_guitar_4_cmp_eq00001 (old_guitar_4_cmp_eq0000)
-     LUT4_L:I0->LO         1   0.612   0.103  leds_0_mux00001_SW0 (N21)
-     LUT4:I3->O            5   0.612   0.568  leds_0_mux00001 (N111)
-     LUT4:I2->O            1   0.612   0.426  leds_3_mux000030 (leds_3_mux000030)
-     LUT3:I1->O            1   0.612   0.357  leds_3_mux000032 (leds_3_mux000032)
+     IBUF:I->O            16   1.106   1.031  btn_0_IBUF (btn_0_IBUF)
+     LUT3:I0->O            7   0.612   0.754  old_bass_2_cmp_eq00001 (old_bass_2_cmp_eq0000)
+     LUT4_L:I0->LO         1   0.612   0.103  leds_0_mux00001_SW0 (N48)
+     LUT4:I3->O            5   0.612   0.607  leds_0_mux00001 (N111)
+     LUT4_L:I1->LO         1   0.612   0.252  leds_3_mux000023 (leds_3_mux000023)
+     LUT4:I0->O            1   0.612   0.357  leds_3_mux000048 (leds_3_mux000048)
      FDS:S                     0.795          leds_3
     ----------------------------------------
-    Total                      7.968ns (4.961ns logic, 3.007ns route)
-                                       (62.3% logic, 37.7% route)
+    Total                      8.065ns (4.961ns logic, 3.104ns route)
+                                       (61.5% logic, 38.5% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
@@ -571,11 +572,11 @@ Offset:              4.182ns (Levels of Logic = 1)
 
 
 Total REAL time to Xst completion: 10.00 secs
-Total CPU time to Xst completion: 9.99 secs
+Total CPU time to Xst completion: 10.29 secs
  
 --> 
 
-Total memory usage is 202360 kilobytes
+Total memory usage is 219784 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   27 (   0 filtered)

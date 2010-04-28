@@ -2,14 +2,13 @@ Release 10.1.03 ngdbuild K.39 (nt)
 Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
 
 Command Line: C:\Xilinx\10.1\ISE\bin\nt\unwrapped\ngdbuild.exe -ise
-C:/Users/Major
-Smasher/Desktop/erauguitarhero/FGPA_Instruments/instrument_controller/instrument
-_controller.ise -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-5
-instrument_main.ngc instrument_main.ngd
+C:/Users/Shadow/Desktop/erauguitarhero/FGPA_Instruments/instrument_controller/in
+strument_controller.ise -intstyle ise -dd _ngo -nt timestamp -i -p
+xc3s500e-fg320-5 instrument_main.ngc instrument_main.ngd
 
-Reading NGO file "C:/Users/Major
-Smasher/Desktop/erauguitarhero/FGPA_Instruments/instrument_controller/instrument
-_main.ngc" ...
+Reading NGO file
+"C:/Users/Shadow/Desktop/erauguitarhero/FGPA_Instruments/instrument_controller/i
+nstrument_main.ngc" ...
 Reading in constraint information from 'instrument_main.ucf'...
 Gathering constraint information from source properties...
 Done.
@@ -37,7 +36,7 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings:   1
 
-Total memory usage is 111540 kilobytes
+Total memory usage is 112708 kilobytes
 
 Writing NGD file "instrument_main.ngd" ...
 
