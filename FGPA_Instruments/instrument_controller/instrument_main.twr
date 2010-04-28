@@ -1,0 +1,115 @@
+--------------------------------------------------------------------------------
+Release 10.1.03 Trace  (nt)
+Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\10.1\ISE\bin\nt\unwrapped\trce.exe -ise
+C:/Users/Major Smasher/Desktop/erauguitarhero/FGPA_Instruments/instrument_controller/instrument_controller.ise
+-intstyle ise -v 3 -s 5 -xml instrument_main instrument_main.ncd -o
+instrument_main.twr instrument_main.pcf -ucf instrument_main.ucf
+
+Design file:              instrument_main.ncd
+Physical constraint file: instrument_main.pcf
+Device,package,speed:     xc3s500e,fg320,-5 (PRODUCTION 1.27 2008-01-09)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock clk
+------------+------------+------------+------------------+--------+
+            |  Setup to  |  Hold to   |                  | Clock  |
+Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
+------------+------------+------------+------------------+--------+
+RxD         |    1.378(R)|    0.013(R)|clk_BUFGP         |   0.000|
+btn<0>      |    7.194(R)|   -0.836(R)|clk_BUFGP         |   0.000|
+btn<1>      |    6.824(R)|   -0.357(R)|clk_BUFGP         |   0.000|
+btn<2>      |    6.271(R)|   -0.501(R)|clk_BUFGP         |   0.000|
+sw<0>       |    2.980(R)|    0.645(R)|clk_BUFGP         |   0.000|
+sw<1>       |    3.389(R)|    0.507(R)|clk_BUFGP         |   0.000|
+sw<2>       |    3.143(R)|    1.167(R)|clk_BUFGP         |   0.000|
+sw<3>       |    2.452(R)|    1.171(R)|clk_BUFGP         |   0.000|
+sw<4>       |    3.149(R)|    0.961(R)|clk_BUFGP         |   0.000|
+sw<5>       |    0.456(R)|    0.766(R)|clk_BUFGP         |   0.000|
+sw<7>       |    5.450(R)|    0.325(R)|clk_BUFGP         |   0.000|
+------------+------------+------------+------------------+--------+
+
+Clock clk to Pad
+------------+------------+------------------+--------+
+            | clk (edge) |                  | Clock  |
+Destination |   to PAD   |Internal Clock(s) | Phase  |
+------------+------------+------------------+--------+
+ANODE<0>    |    6.538(R)|clk_BUFGP         |   0.000|
+ANODE<1>    |    7.263(R)|clk_BUFGP         |   0.000|
+ANODE<2>    |    7.290(R)|clk_BUFGP         |   0.000|
+ANODE<3>    |    6.484(R)|clk_BUFGP         |   0.000|
+CATHODE<0>  |    7.974(R)|clk_BUFGP         |   0.000|
+CATHODE<1>  |    6.486(R)|clk_BUFGP         |   0.000|
+CATHODE<2>  |    7.290(R)|clk_BUFGP         |   0.000|
+CATHODE<3>  |    7.495(R)|clk_BUFGP         |   0.000|
+CATHODE<4>  |    6.484(R)|clk_BUFGP         |   0.000|
+CATHODE<5>  |    7.534(R)|clk_BUFGP         |   0.000|
+CATHODE<6>  |    6.468(R)|clk_BUFGP         |   0.000|
+bass<0>     |    7.058(R)|clk_BUFGP         |   0.000|
+bass<1>     |    7.825(R)|clk_BUFGP         |   0.000|
+bass<2>     |    7.456(R)|clk_BUFGP         |   0.000|
+bass<3>     |    7.011(R)|clk_BUFGP         |   0.000|
+bass<4>     |    7.671(R)|clk_BUFGP         |   0.000|
+drum<0>     |    7.730(R)|clk_BUFGP         |   0.000|
+drum<1>     |    7.605(R)|clk_BUFGP         |   0.000|
+drum<2>     |    7.810(R)|clk_BUFGP         |   0.000|
+drum<3>     |    7.830(R)|clk_BUFGP         |   0.000|
+drum_foot   |    8.368(R)|clk_BUFGP         |   0.000|
+guitar<0>   |    7.892(R)|clk_BUFGP         |   0.000|
+guitar<1>   |    7.435(R)|clk_BUFGP         |   0.000|
+guitar<2>   |    7.642(R)|clk_BUFGP         |   0.000|
+guitar<3>   |    6.528(R)|clk_BUFGP         |   0.000|
+guitar<4>   |    7.336(R)|clk_BUFGP         |   0.000|
+leds<0>     |    7.617(R)|clk_BUFGP         |   0.000|
+leds<1>     |    7.556(R)|clk_BUFGP         |   0.000|
+leds<2>     |    7.496(R)|clk_BUFGP         |   0.000|
+leds<3>     |    7.176(R)|clk_BUFGP         |   0.000|
+leds<4>     |    6.951(R)|clk_BUFGP         |   0.000|
+leds<5>     |    6.720(R)|clk_BUFGP         |   0.000|
+leds<6>     |    9.519(R)|clk_BUFGP         |   0.000|
+leds<7>     |    7.089(R)|clk_BUFGP         |   0.000|
+strum_b     |    8.189(R)|clk_BUFGP         |   0.000|
+strum_g     |    7.104(R)|clk_BUFGP         |   0.000|
+------------+------------+------------------+--------+
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    7.854|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Analysis completed Tue Apr 27 23:47:07 2010 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 135 MB
+
+
+

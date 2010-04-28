@@ -1,0 +1,4 @@
+verilog work "strum_bar.v"
+verilog work "LCD.v"
+verilog work "async_receiver.v"
+verilog work "instrument_main.v"

@@ -1,0 +1,5 @@
+# begin LFP file C:\Users\Major Smasher\Desktop\erauguitarhero\FGPA_Instruments\instrument_controller\instrument_main.lfp
+designfile instrument_main.v
+parttype xc3s500e-5-fg320
+bus_delimiter 1;
+set_busdelim_onsave 1;
