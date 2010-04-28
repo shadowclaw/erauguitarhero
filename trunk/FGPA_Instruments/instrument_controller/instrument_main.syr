@@ -207,10 +207,6 @@ Unit <strum_bar> synthesized.
 Synthesizing Unit <LCD>.
     Related source file is "LCD.v".
     Found 4x4-bit ROM for signal <ANODE$mux0000> created at line 40.
-    Found 16x8-bit ROM for signal <CATHODE$mux0001> created at line 49.
-    Found 16x8-bit ROM for signal <CATHODE$mux0002> created at line 70.
-    Found 16x8-bit ROM for signal <CATHODE$mux0003> created at line 91.
-    Found 16x8-bit ROM for signal <CATHODE$mux0004> created at line 112.
     Found 4-bit register for signal <ANODE>.
     Found 8-bit register for signal <CATHODE>.
     Found 8-bit 4-to-1 multiplexer for signal <CATHODE$mux0000> created at line 47.
@@ -218,7 +214,7 @@ Synthesizing Unit <LCD>.
     Found 30-bit up counter for signal <slw_clk>.
     Found 30-bit comparator lessequal for signal <slw_clk$cmp_le0000> created at line 34.
     Summary:
-	inferred   5 ROM(s).
+	inferred   1 ROM(s).
 	inferred   2 Counter(s).
 	inferred  12 D-type flip-flop(s).
 	inferred   1 Comparator(s).
@@ -258,8 +254,7 @@ Unit <instrument_main> synthesized.
 HDL Synthesis Report
 
 Macro Statistics
-# ROMs                                                 : 5
- 16x8-bit ROM                                          : 4
+# ROMs                                                 : 1
  4x4-bit ROM                                           : 1
 # Adders/Subtractors                                   : 3
  17-bit adder                                          : 1
@@ -317,8 +312,7 @@ WARNING:Xst:2677 - Node <RxD_endofpacket> of sequential type is unconnected in b
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# ROMs                                                 : 5
- 16x8-bit ROM                                          : 4
+# ROMs                                                 : 1
  4x4-bit ROM                                           : 1
 # Adders/Subtractors                                   : 3
  17-bit adder                                          : 1
@@ -350,8 +344,6 @@ Macro Statistics
 WARNING:Xst:2677 - Node <Baud8GeneratorAcc_0> of sequential type is unconnected in block <async_receiver>.
 WARNING:Xst:2677 - Node <Baud8GeneratorAcc_1> of sequential type is unconnected in block <async_receiver>.
 WARNING:Xst:2677 - Node <Baud8GeneratorAcc_2> of sequential type is unconnected in block <async_receiver>.
-WARNING:Xst:1710 - FF/Latch <CATHODE_7> (without init value) has a constant value of 1 in block <LCD>. This FF/Latch will be trimmed during the optimization process.
-INFO:Xst:2261 - The FF/Latch <CATHODE_0> in Unit <LCD> is equivalent to the following FF/Latch, which will be removed : <CATHODE_3> 
 
 Optimizing unit <instrument_main> ...
 
@@ -360,6 +352,10 @@ Optimizing unit <async_receiver> ...
 Optimizing unit <strum_bar> ...
 
 Optimizing unit <LCD> ...
+WARNING:Xst:1710 - FF/Latch <CATHODE_5> (without init value) has a constant value of 0 in block <LCD>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <CATHODE_5> (without init value) has a constant value of 0 in block <LCD>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <CATHODE_5> (without init value) has a constant value of 0 in block <LCD>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <CATHODE_5> (without init value) has a constant value of 0 in block <LCD>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:2677 - Node <receiver/gap_count_4> of sequential type is unconnected in block <instrument_main>.
 WARNING:Xst:2677 - Node <receiver/gap_count_3> of sequential type is unconnected in block <instrument_main>.
 WARNING:Xst:2677 - Node <receiver/gap_count_2> of sequential type is unconnected in block <instrument_main>.
@@ -377,8 +373,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 233
- Flip-Flops                                            : 233
+# Registers                                            : 234
+ Flip-Flops                                            : 234
 
 =========================================================================
 
@@ -407,24 +403,24 @@ Design Statistics
 # IOs                              : 50
 
 Cell Usage :
-# BELS                             : 745
+# BELS                             : 755
 #      GND                         : 1
 #      INV                         : 29
-#      LUT1                        : 165
-#      LUT2                        : 23
+#      LUT1                        : 164
+#      LUT2                        : 22
 #      LUT2_D                      : 1
 #      LUT2_L                      : 2
-#      LUT3                        : 32
+#      LUT3                        : 31
 #      LUT3_D                      : 5
-#      LUT4                        : 85
-#      LUT4_L                      : 9
-#      MUXCY                       : 218
-#      MUXF5                       : 11
+#      LUT4                        : 94
+#      LUT4_L                      : 10
+#      MUXCY                       : 215
+#      MUXF5                       : 17
 #      VCC                         : 1
 #      XORCY                       : 163
-# FlipFlops/Latches                : 233
+# FlipFlops/Latches                : 234
 #      FD                          : 17
-#      FDE                         : 55
+#      FDE                         : 56
 #      FDR                         : 61
 #      FDRE                        : 94
 #      FDS                         : 6
@@ -440,9 +436,9 @@ Device utilization summary:
 
 Selected Device : 3s500efg320-5 
 
- Number of Slices:                      184  out of   4656     3%  
- Number of Slice Flip Flops:            233  out of   9312     2%  
- Number of 4 input LUTs:                351  out of   9312     3%  
+ Number of Slices:                      186  out of   4656     3%  
+ Number of Slice Flip Flops:            234  out of   9312     2%  
+ Number of 4 input LUTs:                358  out of   9312     3%  
  Number of IOs:                          50
  Number of bonded IOBs:                  49  out of    232    21%  
  Number of GCLKs:                         1  out of     24     4%  
@@ -468,7 +464,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk                                | BUFGP                  | 233   |
+clk                                | BUFGP                  | 234   |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -491,7 +487,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
   Clock period: 6.809ns (frequency: 146.870MHz)
-  Total number of paths / destination ports: 9205 / 539
+  Total number of paths / destination ports: 9273 / 541
 -------------------------------------------------------------------------
 Delay:               6.809ns (Levels of Logic = 19)
   Source:            slw_clk_0 (FF)
@@ -543,7 +539,7 @@ Offset:              7.968ns (Levels of Logic = 6)
     ----------------------------------------  ------------
      IBUF:I->O            10   1.106   0.902  btn_0_IBUF (btn_0_IBUF)
      LUT3:I0->O            4   0.612   0.651  old_guitar_4_cmp_eq00001 (old_guitar_4_cmp_eq0000)
-     LUT4_L:I0->LO         1   0.612   0.103  leds_0_mux00001_SW0 (N10)
+     LUT4_L:I0->LO         1   0.612   0.103  leds_0_mux00001_SW0 (N21)
      LUT4:I3->O            5   0.612   0.568  leds_0_mux00001 (N111)
      LUT4:I2->O            1   0.612   0.426  leds_3_mux000030 (leds_3_mux000030)
      LUT3:I1->O            1   0.612   0.357  leds_3_mux000032 (leds_3_mux000032)
@@ -574,14 +570,14 @@ Offset:              4.182ns (Levels of Logic = 1)
 =========================================================================
 
 
-Total REAL time to Xst completion: 9.00 secs
-Total CPU time to Xst completion: 9.33 secs
+Total REAL time to Xst completion: 10.00 secs
+Total CPU time to Xst completion: 9.99 secs
  
 --> 
 
-Total memory usage is 201464 kilobytes
+Total memory usage is 202360 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   24 (   0 filtered)
-Number of infos    :    4 (   0 filtered)
+Number of warnings :   27 (   0 filtered)
+Number of infos    :    3 (   0 filtered)
 

@@ -1,7 +1,7 @@
 Release 10.1.03 par K.39 (nt)
 Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
 
-CHUMEISTER::  Tue Apr 27 23:46:53 2010
+CHUMEISTER::  Wed Apr 28 09:37:19 2010
 
 par -w -intstyle ise -ol std -t 1 instrument_main_map.ncd instrument_main.ncd
 instrument_main.pcf 
@@ -43,7 +43,7 @@ Design Summary Report:
 
 
    Number of BUFGMUXs                        1 out of 24      4%
-   Number of Slices                        193 out of 4656    4%
+   Number of Slices                        196 out of 4656    4%
       Number of SLICEMs                      0 out of 2328    0%
 
 
@@ -57,35 +57,35 @@ Router effort level (-rl):    Standard
 Starting Placer
 
 Phase 1.1
-Phase 1.1 (Checksum:62784) REAL time: 1 secs 
+Phase 1.1 (Checksum:62a60) REAL time: 2 secs 
 
 Phase 2.7
-Phase 2.7 (Checksum:62784) REAL time: 1 secs 
+Phase 2.7 (Checksum:62a60) REAL time: 2 secs 
 
 Phase 3.31
-Phase 3.31 (Checksum:62784) REAL time: 1 secs 
+Phase 3.31 (Checksum:62a60) REAL time: 2 secs 
 
 Phase 4.2
 
 .
-Phase 4.2 (Checksum:637a5) REAL time: 2 secs 
+Phase 4.2 (Checksum:63a81) REAL time: 2 secs 
 
 Phase 5.30
-Phase 5.30 (Checksum:637a5) REAL time: 2 secs 
+Phase 5.30 (Checksum:63a81) REAL time: 2 secs 
 
 Phase 6.8
-.....
+......
 .
-Phase 6.8 (Checksum:1aafb8) REAL time: 4 secs 
+Phase 6.8 (Checksum:1a757c) REAL time: 4 secs 
 
 Phase 7.5
-Phase 7.5 (Checksum:1aafb8) REAL time: 4 secs 
+Phase 7.5 (Checksum:1a757c) REAL time: 4 secs 
 
 Phase 8.18
-Phase 8.18 (Checksum:1b2cfd) REAL time: 5 secs 
+Phase 8.18 (Checksum:1afa8e) REAL time: 5 secs 
 
 Phase 9.5
-Phase 9.5 (Checksum:1b2cfd) REAL time: 5 secs 
+Phase 9.5 (Checksum:1afa8e) REAL time: 5 secs 
 
 REAL time consumed by placer: 5 secs 
 CPU  time consumed by placer: 4 secs 
@@ -97,15 +97,15 @@ Total CPU time to Placer completion: 5 secs
 
 Starting Router
 
-Phase 1: 1210 unrouted;       REAL time: 7 secs 
+Phase 1: 1258 unrouted;       REAL time: 7 secs 
 
-Phase 2: 1067 unrouted;       REAL time: 7 secs 
+Phase 2: 1111 unrouted;       REAL time: 8 secs 
 
-Phase 3: 198 unrouted;       REAL time: 7 secs 
+Phase 3: 217 unrouted;       REAL time: 8 secs 
 
-Phase 4: 198 unrouted; (21624)      REAL time: 7 secs 
+Phase 4: 217 unrouted; (28784)      REAL time: 8 secs 
 
-Phase 5: 205 unrouted; (0)      REAL time: 7 secs 
+Phase 5: 225 unrouted; (0)      REAL time: 8 secs 
 
 Phase 6: 0 unrouted; (0)      REAL time: 8 secs 
 
@@ -137,7 +137,7 @@ Generating Clock Report
 +---------------------+--------------+------+------+------------+-------------+
 |        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
 +---------------------+--------------+------+------+------------+-------------+
-|           clk_BUFGP | BUFGMUX_X2Y11| No   |  129 |  0.063     |  0.167      |
+|           clk_BUFGP | BUFGMUX_X2Y11| No   |  134 |  0.075     |  0.177      |
 +---------------------+--------------+------+------+------------+-------------+
 
 * Net Skew is the difference between the minimum and maximum routing
@@ -156,8 +156,8 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |  Check  | Worst Case |  Best Case | Timing |   Timing   
                                             |         |    Slack   | Achievable | Errors |    Score   
 ------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net clk | SETUP   |         N/A|     7.854ns|     N/A|           0
-  _BUFGP                                    | HOLD    |     0.887ns|            |       0|           0
+  Autotimespec constraint for clock net clk | SETUP   |         N/A|     7.664ns|     N/A|           0
+  _BUFGP                                    | HOLD    |     0.806ns|            |       0|           0
 ------------------------------------------------------------------------------------------------------
 
 
@@ -171,9 +171,9 @@ Generating Pad Report.
 All signals are completely routed.
 
 Total REAL time to PAR completion: 10 secs 
-Total CPU time to PAR completion: 9 secs 
+Total CPU time to PAR completion: 10 secs 
 
-Peak Memory Usage:  174 MB
+Peak Memory Usage:  175 MB
 
 Placement: Completed - No errors found.
 Routing: Completed - No errors found.
