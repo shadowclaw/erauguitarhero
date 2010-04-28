@@ -1,0 +1,587 @@
+Release 10.1.03 - xst K.39 (nt)
+Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to C:/Users/Major Smasher/Desktop/erauguitarhero/FGPA_Instruments/instrument_controller/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Parameter xsthdpdir set to C:/Users/Major Smasher/Desktop/erauguitarhero/FGPA_Instruments/instrument_controller/xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> Reading design: instrument_main.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+     9.1) Device utilization summary
+     9.2) Partition Resource Summary
+     9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "instrument_main.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "instrument_main"
+Output Format                      : NGC
+Target Device                      : xc3s500e-5-fg320
+
+---- Source Options
+Top Module Name                    : instrument_main
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : lut
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : YES
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : YES
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Library Search Order               : instrument_main.lso
+Keep Hierarchy                     : NO
+Netlist Hierarchy                  : as_optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "strum_bar.v" in library work
+Compiling verilog file "LCD.v" in library work
+Module <strum_bar> compiled
+Compiling verilog file "async_receiver.v" in library work
+Module <LCD> compiled
+Compiling verilog file "instrument_main.v" in library work
+Module <async_receiver> compiled
+Module <instrument_main> compiled
+No errors in compilation
+Analysis of file <"instrument_main.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <instrument_main> in library <work>.
+
+Analyzing hierarchy for module <async_receiver> in library <work> with parameters.
+	Baud = "00000000000000011100001000000000"
+	Baud8 = "00000000000011100001000000000000"
+	Baud8GeneratorAccWidth = "00000000000000000000000000010000"
+	ClkFrequency = "00000010111110101111000010000000"
+
+Analyzing hierarchy for module <strum_bar> in library <work>.
+
+Analyzing hierarchy for module <LCD> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <instrument_main>.
+Module <instrument_main> is correct for synthesis.
+ 
+Analyzing module <async_receiver> in library <work>.
+	Baud = 32'sb00000000000000011100001000000000
+	Baud8 = 32'sb00000000000011100001000000000000
+	Baud8GeneratorAccWidth = 32'sb00000000000000000000000000010000
+	ClkFrequency = 32'sb00000010111110101111000010000000
+Module <async_receiver> is correct for synthesis.
+ 
+Analyzing module <strum_bar> in library <work>.
+Module <strum_bar> is correct for synthesis.
+ 
+Analyzing module <LCD> in library <work>.
+Module <LCD> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <async_receiver>.
+    Related source file is "async_receiver.v".
+WARNING:Xst:646 - Signal <RxD_data_error> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 8-bit register for signal <RxD_data>.
+    Found 1-bit register for signal <RxD_endofpacket>.
+    Found 1-bit register for signal <RxD_data_ready>.
+    Found 3-bit adder carry out for signal <add0000$addsub0000> created at line 59.
+    Found 17-bit register for signal <Baud8GeneratorAcc>.
+    Found 17-bit adder for signal <Baud8GeneratorAcc$add0000> created at line 23.
+    Found 4-bit register for signal <bit_spacing>.
+    Found 5-bit up counter for signal <gap_count>.
+    Found 1-bit register for signal <RxD_bit_inv>.
+    Found 1-bit 4-to-1 multiplexer for signal <RxD_bit_inv$mux0000>.
+    Found 2-bit updown counter for signal <RxD_cnt_inv>.
+    Found 2-bit register for signal <RxD_sync_inv>.
+    Found 4-bit register for signal <state>.
+    Summary:
+	inferred   2 Counter(s).
+	inferred  38 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred   1 Multiplexer(s).
+Unit <async_receiver> synthesized.
+
+
+Synthesizing Unit <strum_bar>.
+    Related source file is "strum_bar.v".
+    Found 1-bit register for signal <strum_b>.
+    Found 1-bit register for signal <strum_g>.
+    Found 1-bit register for signal <drum_foot>.
+    Found 30-bit up counter for signal <slw_clk_0>.
+    Found 30-bit comparator less for signal <slw_clk_0$cmp_lt0000> created at line 41.
+    Found 1-bit xor2 for signal <slw_clk_0$xor0000> created at line 39.
+    Found 30-bit up counter for signal <slw_clk_1>.
+    Found 30-bit comparator less for signal <slw_clk_1$cmp_lt0000> created at line 52.
+    Found 1-bit xor2 for signal <slw_clk_1$xor0000> created at line 50.
+    Found 30-bit up counter for signal <slw_clk_foot>.
+    Found 30-bit comparator lessequal for signal <slw_clk_foot$cmp_le0000> created at line 63.
+    Found 1-bit xor2 for signal <slw_clk_foot$xor0000> created at line 61.
+    Summary:
+	inferred   3 Counter(s).
+	inferred   3 D-type flip-flop(s).
+	inferred   3 Comparator(s).
+Unit <strum_bar> synthesized.
+
+
+Synthesizing Unit <LCD>.
+    Related source file is "LCD.v".
+    Found 4x4-bit ROM for signal <ANODE$mux0000> created at line 40.
+    Found 16x8-bit ROM for signal <CATHODE$mux0001> created at line 49.
+    Found 16x8-bit ROM for signal <CATHODE$mux0002> created at line 70.
+    Found 16x8-bit ROM for signal <CATHODE$mux0003> created at line 91.
+    Found 16x8-bit ROM for signal <CATHODE$mux0004> created at line 112.
+    Found 4-bit register for signal <ANODE>.
+    Found 8-bit register for signal <CATHODE>.
+    Found 8-bit 4-to-1 multiplexer for signal <CATHODE$mux0000> created at line 47.
+    Found 2-bit up counter for signal <i>.
+    Found 30-bit up counter for signal <slw_clk>.
+    Found 30-bit comparator lessequal for signal <slw_clk$cmp_le0000> created at line 34.
+    Summary:
+	inferred   5 ROM(s).
+	inferred   2 Counter(s).
+	inferred  12 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred   8 Multiplexer(s).
+Unit <LCD> synthesized.
+
+
+Synthesizing Unit <instrument_main>.
+    Related source file is "instrument_main.v".
+WARNING:Xst:647 - Input <sw<6>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1780 - Signal <slw_clk_foot> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+    Found 5-bit register for signal <bass>.
+    Found 4-bit register for signal <drum>.
+    Found 5-bit register for signal <guitar>.
+    Found 8-bit register for signal <leds>.
+    Found 4-bit register for signal <an0>.
+    Found 4-bit register for signal <an1>.
+    Found 4-bit register for signal <an2>.
+    Found 4-bit register for signal <an3>.
+    Found 3-bit register for signal <inst>.
+    Found 5-bit comparator greater for signal <inst_1$cmp_gt0000> created at line 79.
+    Found 5-bit comparator greater for signal <inst_1$cmp_gt0001> created at line 110.
+    Found 1-bit register for signal <leds_on>.
+    Found 30-bit comparator lessequal for signal <old_leds_on_5$cmp_le0000> created at line 58.
+    Found 4-bit adder for signal <old_state_LED_6$addsub0000> created at line 64.
+    Found 30-bit up counter for signal <slw_clk>.
+    Found 4-bit up counter for signal <state_LED>.
+    Summary:
+	inferred   2 Counter(s).
+	inferred  42 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   3 Comparator(s).
+Unit <instrument_main> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 5
+ 16x8-bit ROM                                          : 4
+ 4x4-bit ROM                                           : 1
+# Adders/Subtractors                                   : 3
+ 17-bit adder                                          : 1
+ 3-bit adder carry out                                 : 1
+ 4-bit adder                                           : 1
+# Counters                                             : 9
+ 2-bit up counter                                      : 1
+ 2-bit updown counter                                  : 1
+ 30-bit up counter                                     : 5
+ 4-bit up counter                                      : 1
+ 5-bit up counter                                      : 1
+# Registers                                            : 32
+ 1-bit register                                        : 18
+ 17-bit register                                       : 1
+ 2-bit register                                        : 1
+ 4-bit register                                        : 8
+ 5-bit register                                        : 2
+ 8-bit register                                        : 2
+# Comparators                                          : 7
+ 30-bit comparator less                                : 2
+ 30-bit comparator lessequal                           : 3
+ 5-bit comparator greater                              : 2
+# Multiplexers                                         : 2
+ 1-bit 4-to-1 multiplexer                              : 1
+ 8-bit 4-to-1 multiplexer                              : 1
+# Xors                                                 : 3
+ 1-bit xor2                                            : 3
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Loading device for application Rf_Device from file '3s500e.nph' in environment C:\Xilinx\10.1\ISE.
+
+Synthesizing (advanced) Unit <LCD>.
+INFO:Xst - In order to maximize performance and save block RAM resources, the small ROM <Mrom_ANODE_mux0000> will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
+Unit <LCD> synthesized (advanced).
+WARNING:Xst:1710 - FF/Latch <an0_1> (without init value) has a constant value of 0 in block <instrument_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <an0_3> (without init value) has a constant value of 0 in block <instrument_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <an1_1> (without init value) has a constant value of 1 in block <instrument_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <an1_2> (without init value) has a constant value of 0 in block <instrument_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <an1_3> (without init value) has a constant value of 0 in block <instrument_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <an2_1> (without init value) has a constant value of 1 in block <instrument_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <an2_2> (without init value) has a constant value of 0 in block <instrument_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <an2_3> (without init value) has a constant value of 0 in block <instrument_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <an3_1> (without init value) has a constant value of 0 in block <instrument_main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <an3_3> (without init value) has a constant value of 0 in block <instrument_main>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <an0_0> in Unit <instrument_main> is equivalent to the following 2 FFs/Latches, which will be removed : <an2_0> <an3_2> 
+INFO:Xst:2261 - The FF/Latch <an0_2> in Unit <instrument_main> is equivalent to the following 2 FFs/Latches, which will be removed : <an1_0> <an3_0> 
+WARNING:Xst:2677 - Node <RxD_endofpacket> of sequential type is unconnected in block <receiver>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 5
+ 16x8-bit ROM                                          : 4
+ 4x4-bit ROM                                           : 1
+# Adders/Subtractors                                   : 3
+ 17-bit adder                                          : 1
+ 3-bit adder carry out                                 : 1
+ 4-bit adder                                           : 1
+# Counters                                             : 9
+ 2-bit up counter                                      : 1
+ 2-bit updown counter                                  : 1
+ 30-bit up counter                                     : 5
+ 4-bit up counter                                      : 1
+ 5-bit up counter                                      : 1
+# Registers                                            : 81
+ Flip-Flops                                            : 81
+# Comparators                                          : 7
+ 30-bit comparator less                                : 2
+ 30-bit comparator lessequal                           : 3
+ 5-bit comparator greater                              : 2
+# Multiplexers                                         : 2
+ 1-bit 4-to-1 multiplexer                              : 1
+ 8-bit 4-to-1 multiplexer                              : 1
+# Xors                                                 : 3
+ 1-bit xor2                                            : 3
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:2677 - Node <Baud8GeneratorAcc_0> of sequential type is unconnected in block <async_receiver>.
+WARNING:Xst:2677 - Node <Baud8GeneratorAcc_1> of sequential type is unconnected in block <async_receiver>.
+WARNING:Xst:2677 - Node <Baud8GeneratorAcc_2> of sequential type is unconnected in block <async_receiver>.
+WARNING:Xst:1710 - FF/Latch <CATHODE_7> (without init value) has a constant value of 1 in block <LCD>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <CATHODE_0> in Unit <LCD> is equivalent to the following FF/Latch, which will be removed : <CATHODE_3> 
+
+Optimizing unit <instrument_main> ...
+
+Optimizing unit <async_receiver> ...
+
+Optimizing unit <strum_bar> ...
+
+Optimizing unit <LCD> ...
+WARNING:Xst:2677 - Node <receiver/gap_count_4> of sequential type is unconnected in block <instrument_main>.
+WARNING:Xst:2677 - Node <receiver/gap_count_3> of sequential type is unconnected in block <instrument_main>.
+WARNING:Xst:2677 - Node <receiver/gap_count_2> of sequential type is unconnected in block <instrument_main>.
+WARNING:Xst:2677 - Node <receiver/gap_count_1> of sequential type is unconnected in block <instrument_main>.
+WARNING:Xst:2677 - Node <receiver/gap_count_0> of sequential type is unconnected in block <instrument_main>.
+WARNING:Xst:2677 - Node <receiver/RxD_endofpacket> of sequential type is unconnected in block <instrument_main>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block instrument_main, actual ratio is 4.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 233
+ Flip-Flops                                            : 233
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                             *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : instrument_main.ngr
+Top Level Output File Name         : instrument_main
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : NO
+
+Design Statistics
+# IOs                              : 50
+
+Cell Usage :
+# BELS                             : 745
+#      GND                         : 1
+#      INV                         : 29
+#      LUT1                        : 165
+#      LUT2                        : 23
+#      LUT2_D                      : 1
+#      LUT2_L                      : 2
+#      LUT3                        : 32
+#      LUT3_D                      : 5
+#      LUT4                        : 85
+#      LUT4_L                      : 9
+#      MUXCY                       : 218
+#      MUXF5                       : 11
+#      VCC                         : 1
+#      XORCY                       : 163
+# FlipFlops/Latches                : 233
+#      FD                          : 17
+#      FDE                         : 55
+#      FDR                         : 61
+#      FDRE                        : 94
+#      FDS                         : 6
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 48
+#      IBUF                        : 11
+#      OBUF                        : 37
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-5 
+
+ Number of Slices:                      184  out of   4656     3%  
+ Number of Slice Flip Flops:            233  out of   9312     2%  
+ Number of 4 input LUTs:                351  out of   9312     3%  
+ Number of IOs:                          50
+ Number of bonded IOBs:                  49  out of    232    21%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 233   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 6.809ns (Maximum Frequency: 146.870MHz)
+   Minimum input arrival time before clock: 7.968ns
+   Maximum output required time after clock: 4.182ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 6.809ns (frequency: 146.870MHz)
+  Total number of paths / destination ports: 9205 / 539
+-------------------------------------------------------------------------
+Delay:               6.809ns (Levels of Logic = 19)
+  Source:            slw_clk_0 (FF)
+  Destination:       leds_6 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: slw_clk_0 to leds_6
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.514   0.532  slw_clk_0 (slw_clk_0)
+     LUT4:I0->O            1   0.612   0.000  Mcompar_old_leds_on_5_cmp_le0000_lut<0> (Mcompar_old_leds_on_5_cmp_le0000_lut<0>)
+     MUXCY:S->O            1   0.404   0.000  Mcompar_old_leds_on_5_cmp_le0000_cy<0> (Mcompar_old_leds_on_5_cmp_le0000_cy<0>)
+     MUXCY:CI->O           1   0.051   0.000  Mcompar_old_leds_on_5_cmp_le0000_cy<1> (Mcompar_old_leds_on_5_cmp_le0000_cy<1>)
+     MUXCY:CI->O           1   0.051   0.000  Mcompar_old_leds_on_5_cmp_le0000_cy<2> (Mcompar_old_leds_on_5_cmp_le0000_cy<2>)
+     MUXCY:CI->O           1   0.051   0.000  Mcompar_old_leds_on_5_cmp_le0000_cy<3> (Mcompar_old_leds_on_5_cmp_le0000_cy<3>)
+     MUXCY:CI->O           1   0.051   0.000  Mcompar_old_leds_on_5_cmp_le0000_cy<4> (Mcompar_old_leds_on_5_cmp_le0000_cy<4>)
+     MUXCY:CI->O           1   0.051   0.000  Mcompar_old_leds_on_5_cmp_le0000_cy<5> (Mcompar_old_leds_on_5_cmp_le0000_cy<5>)
+     MUXCY:CI->O           1   0.051   0.000  Mcompar_old_leds_on_5_cmp_le0000_cy<6> (Mcompar_old_leds_on_5_cmp_le0000_cy<6>)
+     MUXCY:CI->O           1   0.051   0.000  Mcompar_old_leds_on_5_cmp_le0000_cy<7> (Mcompar_old_leds_on_5_cmp_le0000_cy<7>)
+     MUXCY:CI->O           1   0.051   0.000  Mcompar_old_leds_on_5_cmp_le0000_cy<8> (Mcompar_old_leds_on_5_cmp_le0000_cy<8>)
+     MUXCY:CI->O           1   0.051   0.000  Mcompar_old_leds_on_5_cmp_le0000_cy<9> (Mcompar_old_leds_on_5_cmp_le0000_cy<9>)
+     MUXCY:CI->O           1   0.051   0.000  Mcompar_old_leds_on_5_cmp_le0000_cy<10> (Mcompar_old_leds_on_5_cmp_le0000_cy<10>)
+     MUXCY:CI->O           1   0.051   0.000  Mcompar_old_leds_on_5_cmp_le0000_cy<11> (Mcompar_old_leds_on_5_cmp_le0000_cy<11>)
+     MUXCY:CI->O           1   0.051   0.000  Mcompar_old_leds_on_5_cmp_le0000_cy<12> (Mcompar_old_leds_on_5_cmp_le0000_cy<12>)
+     MUXCY:CI->O           1   0.051   0.000  Mcompar_old_leds_on_5_cmp_le0000_cy<13> (Mcompar_old_leds_on_5_cmp_le0000_cy<13>)
+     MUXCY:CI->O          15   0.400   0.867  Mcompar_old_leds_on_5_cmp_le0000_cy<14> (old_leds_on_5_cmp_le0000)
+     LUT4:I3->O            3   0.612   0.603  _old_state_LED_6<3>1 (_old_state_LED_6<3>)
+     LUT4_L:I0->LO         1   0.612   0.103  leds_6_mux000021 (leds_6_mux000021)
+     LUT4:I3->O            1   0.612   0.000  leds_6_mux000036 (leds_6_mux0000)
+     FD:D                      0.268          leds_6
+    ----------------------------------------
+    Total                      6.809ns (4.703ns logic, 2.106ns route)
+                                       (69.1% logic, 30.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 271 / 51
+-------------------------------------------------------------------------
+Offset:              7.968ns (Levels of Logic = 6)
+  Source:            btn<0> (PAD)
+  Destination:       leds_3 (FF)
+  Destination Clock: clk rising
+
+  Data Path: btn<0> to leds_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            10   1.106   0.902  btn_0_IBUF (btn_0_IBUF)
+     LUT3:I0->O            4   0.612   0.651  old_guitar_4_cmp_eq00001 (old_guitar_4_cmp_eq0000)
+     LUT4_L:I0->LO         1   0.612   0.103  leds_0_mux00001_SW0 (N10)
+     LUT4:I3->O            5   0.612   0.568  leds_0_mux00001 (N111)
+     LUT4:I2->O            1   0.612   0.426  leds_3_mux000030 (leds_3_mux000030)
+     LUT3:I1->O            1   0.612   0.357  leds_3_mux000032 (leds_3_mux000032)
+     FDS:S                     0.795          leds_3
+    ----------------------------------------
+    Total                      7.968ns (4.961ns logic, 3.007ns route)
+                                       (62.3% logic, 37.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 36 / 36
+-------------------------------------------------------------------------
+Offset:              4.182ns (Levels of Logic = 1)
+  Source:            strum/strum_b (FF)
+  Destination:       strum_b (PAD)
+  Source Clock:      clk rising
+
+  Data Path: strum/strum_b to strum_b
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              4   0.514   0.499  strum/strum_b (strum/strum_b)
+     OBUF:I->O                 3.169          strum_b_OBUF (strum_b)
+    ----------------------------------------
+    Total                      4.182ns (3.683ns logic, 0.499ns route)
+                                       (88.1% logic, 11.9% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 9.33 secs
+ 
+--> 
+
+Total memory usage is 201464 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   24 (   0 filtered)
+Number of infos    :    4 (   0 filtered)
+
