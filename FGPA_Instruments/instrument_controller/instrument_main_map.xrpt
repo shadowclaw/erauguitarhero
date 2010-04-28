@@ -5,7 +5,7 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="Map" timeStamp="Wed Apr 28 09:37:14 2010">
+  <application stringID="Map" timeStamp="Wed Apr 28 12:12:35 2010">
     <task stringID="MAP_PACK_REPORT">
       <section stringID="MAP_DESIGN_INFORMATION">
         <item stringID="MAP_PART" value="3s500efg320-5"/>
@@ -18,7 +18,7 @@
         <item dataType="int" stringID="MAP_NUM_ERRORS" value="0"/>
         <item dataType="int" stringID="MAP_FILTERED_WARNINGS" value="0"/>
         <item dataType="int" stringID="MAP_NUM_WARNINGS" value="1"/>
-        <item UNITS="KB" dataType="int" stringID="MAP_PEAK_MEMORY" value="199512"/>
+        <item UNITS="KB" dataType="int" stringID="MAP_PEAK_MEMORY" value="209064"/>
         <item stringID="MAP_TOTAL_REAL_TIME" value="3 secs "/>
         <item stringID="MAP_TOTAL_CPU_TIME" value="3 secs "/>
       </section>
@@ -31,10 +31,10 @@
         <item dataType="int" stringID="MAP_LUTS_PER_SLICE" value="2"/>
         <item AVAILABLE="2328" dataType="int" stringID="MAP_NUM_SLICEM" value="0"/>
         <item AVAILABLE="2328" dataType="int" stringID="MAP_NUM_SLICEL" value="0"/>
-        <item dataType="int" stringID="MAP_NUM_4_INPUT_LUT" value="351"/>
-        <item dataType="int" stringID="MAP_AGG_SLICE" value="196"/>
+        <item dataType="int" stringID="MAP_NUM_4_INPUT_LUT" value="383"/>
+        <item dataType="int" stringID="MAP_AGG_SLICE" value="208"/>
         <item dataType="int" stringID="MAP_NUM_SLICE_UNRELATED" value="0"/>
-        <item dataType="int" stringID="MAP_NUM_LUT_RT" value="164"/>
+        <item dataType="int" stringID="MAP_NUM_LUT_RT" value="171"/>
         <item dataType="int" stringID="MAP_NUM_DP_RAM" value="0"/>
         <item dataType="int" stringID="MAP_NUM_RAM32" value="0"/>
         <item dataType="int" stringID="MAP_NUM_RAM16" value="0"/>

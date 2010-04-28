@@ -68,6 +68,7 @@ begin
 		
 	if (sw[7] == 1)
 	begin
+		leds[7] = 0;
 		an0 = 1;
 		an1 = 2;
 		an2 = 3;
@@ -92,6 +93,12 @@ begin
 					else
 						inst[0]=0;
 					end
+		default: begin
+					bass = 0;
+					inst = 0;
+					drum = 0;
+					guitar = 0;
+					end
 		endcase
 	end
 	else
@@ -103,7 +110,7 @@ begin
 		
 		if (RxD_data_ready)
 		begin 
-			leds[7] = 1;
+			leds[7] = ~leds[7];
 			case(RxD_data[2:0])
 			3'b001:	begin//	bass
 						bass = RxD_data[7:3];
@@ -128,11 +135,6 @@ begin
 						end 
 			endcase
 		end 
-
-		else
-		begin 
-			leds[7] = 0;
-		end
 	end
 	//Execute Order 66'ish
 	

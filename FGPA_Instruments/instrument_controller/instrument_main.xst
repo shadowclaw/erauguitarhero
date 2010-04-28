@@ -1,5 +1,5 @@
-set -tmpdir "C:/Users/Major Smasher/Desktop/erauguitarhero/FGPA_Instruments/instrument_controller/xst/projnav.tmp"
-set -xsthdpdir "C:/Users/Major Smasher/Desktop/erauguitarhero/FGPA_Instruments/instrument_controller/xst"
+set -tmpdir "C:/Users/Shadow/Desktop/erauguitarhero/FGPA_Instruments/instrument_controller/xst/projnav.tmp"
+set -xsthdpdir "C:/Users/Shadow/Desktop/erauguitarhero/FGPA_Instruments/instrument_controller/xst"
 run
 -ifn instrument_main.prj
 -ifmt mixed
